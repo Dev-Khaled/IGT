@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class UserDetailsViewController: UIViewController {
+class UserDetailsViewController: BaseWireframe<UserViewModel> {
 
     @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var publicReposLabel: UILabel!
@@ -25,9 +25,23 @@ class UserDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
+        
+        configure(with: viewModel)
+
     }
     
+    // MARK: - BaseWireframe
     
+    override func configure(with viewModel: UserViewModel) {
+        super.configure(with: viewModel)
+        
+        viewModel.requestData(user.login)
+        viewModel.user.subscribe { [weak self] user in
+            self?.user = user
+            self?.setData()
+        }
+    }
+
     // MARK: - Private
     
     private func setData() {

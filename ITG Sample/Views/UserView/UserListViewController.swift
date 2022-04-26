@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserListViewController: BaseWireframe<UserViewModel> {
+class UserListViewController: BaseWireframe<UsersViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +22,7 @@ class UserListViewController: BaseWireframe<UserViewModel> {
     
     // MARK: - BaseWireframe
     
-    override func configure(with viewModel: UserViewModel) {
+    override func configure(with viewModel: UsersViewModel) {
         super.configure(with: viewModel)
         
         viewModel.requestData(0)

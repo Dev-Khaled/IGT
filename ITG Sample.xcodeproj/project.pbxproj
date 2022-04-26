@@ -60,8 +60,9 @@
 		299D5305281898C0006F5DB7 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5304281898C0006F5DB7 /* BaseWireframe.swift */; };
 		299D5307281899BD006F5DB7 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5306281899BD006F5DB7 /* Dynamic.swift */; };
 		299D5309281899D7006F5DB7 /* BaseLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5308281899D7006F5DB7 /* BaseLoading.swift */; };
-		299D530B28189A83006F5DB7 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530A28189A83006F5DB7 /* UserViewModel.swift */; };
+		299D530B28189A83006F5DB7 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530A28189A83006F5DB7 /* UsersViewModel.swift */; };
 		299D530D28189BAD006F5DB7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530C28189BAD006F5DB7 /* BaseViewModel.swift */; };
+		299D530F2818A1D0006F5DB7 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530E2818A1D0006F5DB7 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,8 +117,9 @@
 		299D5304281898C0006F5DB7 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		299D5306281899BD006F5DB7 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		299D5308281899D7006F5DB7 /* BaseLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoading.swift; sourceTree = "<group>"; };
-		299D530A28189A83006F5DB7 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		299D530A28189A83006F5DB7 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		299D530C28189BAD006F5DB7 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		299D530E2818A1D0006F5DB7 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +185,8 @@
 				299D530C28189BAD006F5DB7 /* BaseViewModel.swift */,
 				299D5306281899BD006F5DB7 /* Dynamic.swift */,
 				299D5308281899D7006F5DB7 /* BaseLoading.swift */,
-				299D530A28189A83006F5DB7 /* UserViewModel.swift */,
+				299D530A28189A83006F5DB7 /* UsersViewModel.swift */,
+				299D530E2818A1D0006F5DB7 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -447,13 +450,14 @@
 				298041C528187A4600A2D3A1 /* UserTableCell.swift in Sources */,
 				2980417E2818713A00A2D3A1 /* EncodeDecode+Helpers.swift in Sources */,
 				299D52F9281880DA006F5DB7 /* SettingsViewController.swift in Sources */,
+				299D530F2818A1D0006F5DB7 /* UserViewModel.swift in Sources */,
 				298041792818710300A2D3A1 /* MockupService.swift in Sources */,
 				299D530028188763006F5DB7 /* UserDetailsViewController.swift in Sources */,
 				299D52FD28188117006F5DB7 /* NoDataView.swift in Sources */,
 				2980419C281872FB00A2D3A1 /* UserDefaults+Extension.swift in Sources */,
 				2980416D2818701600A2D3A1 /* Service.swift in Sources */,
 				29804198281872FB00A2D3A1 /* Localizable+Extensions.swift in Sources */,
-				299D530B28189A83006F5DB7 /* UserViewModel.swift in Sources */,
+				299D530B28189A83006F5DB7 /* UsersViewModel.swift in Sources */,
 				29804197281872FB00A2D3A1 /* UITableView+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

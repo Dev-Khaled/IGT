@@ -8,9 +8,9 @@
 import Foundation
 import Interstellar
 
-class UserViewModel: BaseViewModel {
+class UsersViewModel: BaseViewModel {
     
-    var user: Observable<User> = Observable()
+    var items: Observable<[User]> = Observable()
 
     
     required init() {
@@ -21,13 +21,13 @@ class UserViewModel: BaseViewModel {
         
     }
 
-    func requestData(_ username: String) {
+    func requestData(_ since: Int) {
         isLoaderHidden.value = .show
-        APIService.shared.fetch(route: APIRouter.user(username: username)) { (result: Swift.Result<User, Error>) in
+        APIService.shared.fetch(route: APIRouter.users(since: since)) { (result: Swift.Result<[User], Error>) in
             self.isLoaderHidden.value = .hide
             switch result {
-            case .success(let object):
-                self.user.update(object)
+            case .success(let items):
+                self.items.update(items)
             case .failure(let error):
                 self.alertMessage.update(error.localizedDescription)
             }
