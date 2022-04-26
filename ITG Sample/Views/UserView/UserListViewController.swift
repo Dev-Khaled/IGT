@@ -7,15 +7,29 @@
 
 import UIKit
 
-class UserListViewController: UIViewController {
-
+class UserListViewController: BaseWireframe<UserViewModel> {
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
+        configure(with: viewModel)
+
     }
 
+    
+    // MARK: - BaseWireframe
+    
+    override func configure(with viewModel: UserViewModel) {
+        super.configure(with: viewModel)
+        
+        viewModel.requestData(0)
+        viewModel.items.subscribe { [weak self]  items in
+            self?.tableView.reloadData()
+        }
+    }
 }
 
 
@@ -29,14 +43,21 @@ extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        viewModel.items.value?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as UserTableCell
-        // TODO: cell.configure(...)
+        cell.configure(with: viewModel.items.value![indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = UserDetailsViewController.instantiate()
+        controller.user = viewModel.items.value![indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 

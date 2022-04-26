@@ -11,3 +11,11 @@
 "Settings" = "الإعدادات";
 "More" = "المزيد";
 "Home" = "الرئيسية";
+
+"User" = "مستخدم";
+"Organization" = "منظمة";
+"Name" = "الاسم";
+"User Details" = "تفاصيل المستخدم";
+"Public Repos" = "الـ Repos العامة";
+"Followers" = "المتابعون";
+"Following" = "يتابع";

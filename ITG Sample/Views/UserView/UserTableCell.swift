@@ -28,14 +28,18 @@ class UserTableCell: UITableViewCell, NibBased {
         switch user.type {
         case .user:
             typeLabel.text = "User".localized
+            avatarView.kf.setImage(
+                with: user.avatarUrl.url,
+                placeholder: UIImage.userPlaceholder
+            )
         case .organization:
             typeLabel.text = "Organization".localized
+            avatarView.kf.setImage(
+                with: user.avatarUrl.url,
+                placeholder: UIImage.organizationPlaceholder
+            )
         }
         
-        avatarView.kf.setImage(
-            with: user.avatarUrl.url,
-            placeholder: UIImage.placeholder
-        )
     }
     
 }

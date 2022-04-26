@@ -52,6 +52,16 @@
 		298041C02818787300A2D3A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 298041C22818787300A2D3A1 /* InfoPlist.strings */; };
 		298041C528187A4600A2D3A1 /* UserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298041C328187A4600A2D3A1 /* UserTableCell.swift */; };
 		298041C628187A4600A2D3A1 /* UserTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298041C428187A4600A2D3A1 /* UserTableCell.xib */; };
+		299D52F9281880DA006F5DB7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D52F8281880DA006F5DB7 /* SettingsViewController.swift */; };
+		299D52FD28188117006F5DB7 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D52FB28188117006F5DB7 /* NoDataView.swift */; };
+		299D52FE28188117006F5DB7 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D52FC28188117006F5DB7 /* NoDataView.xib */; };
+		299D530028188763006F5DB7 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D52FF28188763006F5DB7 /* UserDetailsViewController.swift */; };
+		299D530328189690006F5DB7 /* Interstellar in Frameworks */ = {isa = PBXBuildFile; productRef = 299D530228189690006F5DB7 /* Interstellar */; };
+		299D5305281898C0006F5DB7 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5304281898C0006F5DB7 /* BaseWireframe.swift */; };
+		299D5307281899BD006F5DB7 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5306281899BD006F5DB7 /* Dynamic.swift */; };
+		299D5309281899D7006F5DB7 /* BaseLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D5308281899D7006F5DB7 /* BaseLoading.swift */; };
+		299D530B28189A83006F5DB7 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530A28189A83006F5DB7 /* UserViewModel.swift */; };
+		299D530D28189BAD006F5DB7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530C28189BAD006F5DB7 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +109,15 @@
 		298041C12818787300A2D3A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		298041C328187A4600A2D3A1 /* UserTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCell.swift; sourceTree = "<group>"; };
 		298041C428187A4600A2D3A1 /* UserTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableCell.xib; sourceTree = "<group>"; };
+		299D52F8281880DA006F5DB7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		299D52FB28188117006F5DB7 /* NoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		299D52FC28188117006F5DB7 /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		299D52FF28188763006F5DB7 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		299D5304281898C0006F5DB7 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		299D5306281899BD006F5DB7 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		299D5308281899D7006F5DB7 /* BaseLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoading.swift; sourceTree = "<group>"; };
+		299D530A28189A83006F5DB7 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		299D530C28189BAD006F5DB7 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +129,7 @@
 				298041AE2818739600A2D3A1 /* Kingfisher in Frameworks */,
 				298041B4281873CF00A2D3A1 /* MBProgressHUD in Frameworks */,
 				2980416328186E7700A2D3A1 /* Alamofire in Frameworks */,
+				299D530328189690006F5DB7 /* Interstellar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +170,8 @@
 		2980416628186FA100A2D3A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2980414E28186DB500A2D3A1 /* UserListViewController.swift */,
-				298041C328187A4600A2D3A1 /* UserTableCell.swift */,
-				298041C428187A4600A2D3A1 /* UserTableCell.xib */,
+				299D52F6281880B9006F5DB7 /* UserView */,
+				299D52F7281880C6006F5DB7 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +179,11 @@
 		2980416728186FB000A2D3A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				299D5304281898C0006F5DB7 /* BaseWireframe.swift */,
+				299D530C28189BAD006F5DB7 /* BaseViewModel.swift */,
+				299D5306281899BD006F5DB7 /* Dynamic.swift */,
+				299D5308281899D7006F5DB7 /* BaseLoading.swift */,
+				299D530A28189A83006F5DB7 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +252,7 @@
 		29804182281872CE00A2D3A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				299D52FA28188117006F5DB7 /* NoDataView */,
 				29804185281872DB00A2D3A1 /* HUD.xcassets */,
 				29804184281872DB00A2D3A1 /* UIKit+Padding.swift */,
 				29804183281872DB00A2D3A1 /* UIViewController+HUD.swift */,
@@ -269,6 +294,34 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		299D52F6281880B9006F5DB7 /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				2980414E28186DB500A2D3A1 /* UserListViewController.swift */,
+				298041C328187A4600A2D3A1 /* UserTableCell.swift */,
+				298041C428187A4600A2D3A1 /* UserTableCell.xib */,
+				299D52FF28188763006F5DB7 /* UserDetailsViewController.swift */,
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
+		299D52F7281880C6006F5DB7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				299D52F8281880DA006F5DB7 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		299D52FA28188117006F5DB7 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				299D52FB28188117006F5DB7 /* NoDataView.swift */,
+				299D52FC28188117006F5DB7 /* NoDataView.xib */,
+			);
+			path = NoDataView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +343,7 @@
 				298041AD2818739600A2D3A1 /* Kingfisher */,
 				298041B0281873BC00A2D3A1 /* UIColorHexSwift */,
 				298041B3281873CF00A2D3A1 /* MBProgressHUD */,
+				299D530228189690006F5DB7 /* Interstellar */,
 			);
 			productName = "ITG Sample";
 			productReference = 2980414728186DB500A2D3A1 /* ITG Sample.app */;
@@ -325,6 +379,7 @@
 				298041AC2818739600A2D3A1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				298041AF281873BC00A2D3A1 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
 				298041B2281873CF00A2D3A1 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				299D530128189690006F5DB7 /* XCRemoteSwiftPackageReference "interstellar" */,
 			);
 			productRefGroup = 2980414828186DB500A2D3A1 /* Products */;
 			projectDirPath = "";
@@ -353,6 +408,7 @@
 				298041A72818733E00A2D3A1 /* Cairo-Light.ttf in Resources */,
 				298041A82818733E00A2D3A1 /* Cairo-Black.ttf in Resources */,
 				2980415228186DB500A2D3A1 /* Main.storyboard in Resources */,
+				299D52FE28188117006F5DB7 /* NoDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +422,9 @@
 				29804199281872FB00A2D3A1 /* Extensions.swift in Sources */,
 				29804186281872DB00A2D3A1 /* UIViewController+HUD.swift in Sources */,
 				298041762818702700A2D3A1 /* NetworkLogger.swift in Sources */,
+				299D5309281899D7006F5DB7 /* BaseLoading.swift in Sources */,
 				29804180281871BA00A2D3A1 /* K.swift in Sources */,
+				299D530D28189BAD006F5DB7 /* BaseViewModel.swift in Sources */,
 				2980415528186DB500A2D3A1 /* ITG_Sample.xcdatamodeld in Sources */,
 				2980419B281872FB00A2D3A1 /* Appearance.swift in Sources */,
 				298041752818702700A2D3A1 /* APIRouter.swift in Sources */,
@@ -374,22 +432,28 @@
 				29804187281872DB00A2D3A1 /* UIKit+Padding.swift in Sources */,
 				2980414F28186DB500A2D3A1 /* UserListViewController.swift in Sources */,
 				298041B62818755300A2D3A1 /* Colors.swift in Sources */,
+				299D5305281898C0006F5DB7 /* BaseWireframe.swift in Sources */,
 				29804195281872FB00A2D3A1 /* NibBased.swift in Sources */,
 				29804193281872FB00A2D3A1 /* Storyboarded.swift in Sources */,
 				2980414B28186DB500A2D3A1 /* AppDelegate.swift in Sources */,
 				29804196281872FB00A2D3A1 /* UIFont+Swizzel.swift in Sources */,
 				2980416528186E8400A2D3A1 /* User.swift in Sources */,
 				2980414D28186DB500A2D3A1 /* SceneDelegate.swift in Sources */,
+				299D5307281899BD006F5DB7 /* Dynamic.swift in Sources */,
 				298041742818702700A2D3A1 /* APIService.swift in Sources */,
 				29804194281872FB00A2D3A1 /* UICollectionViewCell+Utilities.swift in Sources */,
 				2980419A281872FB00A2D3A1 /* Date+Extensions.swift in Sources */,
 				2980417D2818713A00A2D3A1 /* JSONModels.swift in Sources */,
 				298041C528187A4600A2D3A1 /* UserTableCell.swift in Sources */,
 				2980417E2818713A00A2D3A1 /* EncodeDecode+Helpers.swift in Sources */,
+				299D52F9281880DA006F5DB7 /* SettingsViewController.swift in Sources */,
 				298041792818710300A2D3A1 /* MockupService.swift in Sources */,
+				299D530028188763006F5DB7 /* UserDetailsViewController.swift in Sources */,
+				299D52FD28188117006F5DB7 /* NoDataView.swift in Sources */,
 				2980419C281872FB00A2D3A1 /* UserDefaults+Extension.swift in Sources */,
 				2980416D2818701600A2D3A1 /* Service.swift in Sources */,
 				29804198281872FB00A2D3A1 /* Localizable+Extensions.swift in Sources */,
+				299D530B28189A83006F5DB7 /* UserViewModel.swift in Sources */,
 				29804197281872FB00A2D3A1 /* UITableView+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +729,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		299D530128189690006F5DB7 /* XCRemoteSwiftPackageReference "interstellar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jensravens/interstellar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -687,6 +759,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 298041B2281873CF00A2D3A1 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
 			productName = MBProgressHUD;
+		};
+		299D530228189690006F5DB7 /* Interstellar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 299D530128189690006F5DB7 /* XCRemoteSwiftPackageReference "interstellar" */;
+			productName = Interstellar;
 		};
 /* End XCSwiftPackageProductDependency section */
 

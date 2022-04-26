@@ -27,6 +27,8 @@ class NoDataLabel: UILabel {
 
 extension UIImage {
     static let placeholder = UIImage(named: "Placeholder")
+    static let userPlaceholder = UIImage(named: "ProfilePlaceholder")
+    static let organizationPlaceholder = UIImage(named: "OrganizationPlaceholder")
 }
 
 func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {

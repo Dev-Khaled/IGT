@@ -21,7 +21,7 @@ struct User: Codable {
     let name, company: String?
     let blog: String?
     let location: String?
-    let email: String
+    let email: String?
     //let hireable: ??
     let bio: String?
     let twitterUsername: String?

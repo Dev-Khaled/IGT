@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Interstellar",
+        "repositoryURL": "https://github.com/jensravens/interstellar.git",
+        "state": {
+          "branch": null,
+          "revision": "f5f6287a902524d06d82edc3ac09aa739f43ef09",
+          "version": "2.2.0"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
