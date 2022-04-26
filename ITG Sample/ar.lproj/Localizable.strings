@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  ITG Sample
+
+  Created by Khaled Khaldi on 26/04/2022.
+  
+*/
+
+"NoDataAvailableHere" = "يبدو أنه لا يوجد بيانات متاحة هنا";
+"Github Users" = "مستخدمي Github";
+"Settings" = "الإعدادات";
+"More" = "المزيد";
+"Home" = "الرئيسية";
