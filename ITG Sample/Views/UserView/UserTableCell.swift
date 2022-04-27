@@ -23,6 +23,9 @@ class UserTableCell: UITableViewCell, NibBased {
         super.setSelected(selected, animated: animated)
     }
     
+    
+    /// Configure
+    /// - Parameter user: object
     func configure(with user: User) {
         nameLabel.text = user.login
         switch user.typeItem {

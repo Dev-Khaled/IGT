@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+/// Alamofire RequestInterceptor
 final class RequestInterceptor: Alamofire.RequestInterceptor {
 
     // let retryLimit = 3

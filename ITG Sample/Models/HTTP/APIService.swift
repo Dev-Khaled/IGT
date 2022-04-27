@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+/// API implementation of ServiceProtocol
 class APIService {
     static let shared: ServiceProtocol = APIService()
     private init() { }
@@ -27,6 +28,8 @@ extension APIService: ServiceProtocol {
         return session
     }()
 
+    
+    /// Fetch item from Server of type
     func fetch<ModelType: Decodable>(
         route: APIRouter,
         completion: @escaping (Result<ModelType, Error>) -> Void

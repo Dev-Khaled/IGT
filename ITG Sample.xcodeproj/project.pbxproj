@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292DA9A928194A42003F0F92 /* CoreData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DA9A828194A42003F0F92 /* CoreData+Extensions.swift */; };
 		294AAA6128193EDC00A22C58 /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294AAA6028193EDC00A22C58 /* CDManager.swift */; };
 		2980414B28186DB500A2D3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414A28186DB500A2D3A1 /* AppDelegate.swift */; };
 		2980414D28186DB500A2D3A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414C28186DB500A2D3A1 /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292DA9A828194A42003F0F92 /* CoreData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Extensions.swift"; sourceTree = "<group>"; };
 		294AAA6028193EDC00A22C58 /* CDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
 		2980414728186DB500A2D3A1 /* ITG Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITG Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2980414A28186DB500A2D3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				294AAA6028193EDC00A22C58 /* CDManager.swift */,
 				2980415328186DB500A2D3A1 /* ITG_Sample.xcdatamodeld */,
+				292DA9A828194A42003F0F92 /* CoreData+Extensions.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				2980414B28186DB500A2D3A1 /* AppDelegate.swift in Sources */,
 				29804196281872FB00A2D3A1 /* UIFont+Swizzel.swift in Sources */,
 				2980416528186E8400A2D3A1 /* User.swift in Sources */,
+				292DA9A928194A42003F0F92 /* CoreData+Extensions.swift in Sources */,
 				2980414D28186DB500A2D3A1 /* SceneDelegate.swift in Sources */,
 				299D5307281899BD006F5DB7 /* Dynamic.swift in Sources */,
 				298041742818702700A2D3A1 /* APIService.swift in Sources */,

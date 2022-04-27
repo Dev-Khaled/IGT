@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Mockup implementation of ServiceProtocol
 class MockupService {
     static let shared: ServiceProtocol = MockupService()
     private init() { }

@@ -8,6 +8,8 @@
 import Foundation
 import Interstellar
 
+
+/// User Details View Model
 class UserViewModel: BaseViewModel {
     
     var user: Observable<User> = Observable()
@@ -21,6 +23,9 @@ class UserViewModel: BaseViewModel {
         
     }
 
+    
+    /// Request User Full Data
+    /// - Parameter username: username to fetch
     func requestData(_ username: String) {
         isLoaderHidden.value = .show
         APIService.shared.fetch(route: APIRouter.user(username: username)) { (result: Swift.Result<User, Error>) in

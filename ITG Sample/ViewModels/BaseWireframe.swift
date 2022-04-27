@@ -8,6 +8,8 @@
 import UIKit
 import Interstellar
 
+
+/// Base Wireframe for observable view controllers
 class BaseWireframe<T: BaseViewModel>: UIViewController {
     
     var viewModel: T! = T()
@@ -21,6 +23,9 @@ class BaseWireframe<T: BaseViewModel>: UIViewController {
         print("deinit \(self)")
     }
     
+    
+    /// Change loading status observer
+    /// - Parameter loadingObservable: Dynamic Basic Loading observer
     func loadingViewObserve(_ loadingObservable: Dynamic<BaseLoading>){
         loadingObservable.bind { [weak self] loading in
             switch loading {
@@ -36,6 +41,9 @@ class BaseWireframe<T: BaseViewModel>: UIViewController {
         }
     }
     
+    
+    /// Change error status observer
+    /// - Parameter errorsObservable: Observable error string
     func errorObserve(_ errorsObservable: Observable<String>) {
         errorsObservable.subscribe { [weak self] error in
             self?.viewModel.isLoaderHidden.value = .hide

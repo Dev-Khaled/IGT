@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Generic Dynamic Observable Object
 class Dynamic<T> {
     
     // MARK: - Typealias

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// User List
 class UserListViewController: BaseWireframe<UsersViewModel> {
     
     @IBOutlet weak var tableView: UITableView!

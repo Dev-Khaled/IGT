@@ -44,6 +44,8 @@ class UserDetailsViewController: BaseWireframe<UserViewModel> {
 
     // MARK: - Private
     
+    
+    /// display user data
     private func setData() {
         guard isViewLoaded, let user = user else { return }
         

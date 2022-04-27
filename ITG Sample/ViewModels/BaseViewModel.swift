@@ -8,11 +8,15 @@
 import Foundation
 import Interstellar
 
+
+/// For observable alerts and loading statuses
 protocol BaseViewModelProtocol {
     var alertMessage: Observable<String> { get set }
     var isLoaderHidden: Dynamic<BaseLoading> { get set }
 }
 
+
+/// Basic implementation of BaseViewModelProtocol
 class BaseViewModel: NSObject, BaseViewModelProtocol {
   
     var alertMessage: Observable<String> = Observable()

@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+/// JSON decoder with CoreData support
+/// - Returns: new JSONDecoder
 func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -15,6 +18,8 @@ func newJSONDecoder() -> JSONDecoder {
     return decoder
 }
 
+/// JSON encoder
+/// - Returns: new JSONEncoder
 func newJSONEncoder() -> JSONEncoder {
     let encoder = JSONEncoder()
     encoder.keyEncodingStrategy = .convertToSnakeCase
@@ -22,7 +27,8 @@ func newJSONEncoder() -> JSONEncoder {
 }
 
 
- extension DateFormatter {
+extension DateFormatter {
+    /// Date formatter for JSON
      static let jsonDateFormatter: DateFormatter = {
          let formatter = DateFormatter()
          formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // 2007-10-20T05:24:19Z
@@ -34,6 +40,7 @@ func newJSONEncoder() -> JSONEncoder {
 
 
 extension Encodable {
+    /// Convert Encodable object to dictionary
     var dictionary: [String: Any?]? {
         guard let data = try? newJSONEncoder().encode(self) else { return nil }
         let fragmented = try? JSONSerialization.jsonObject(
@@ -51,6 +58,9 @@ extension Encodable {
 
 // enum JSONNumber<T: Numeric>: Codable where T: Codable { // Correct
 // Numeric & Codable & LosslessStringConvertible
+
+
+/// Generic Object to deal with Strings and Numeric type mismatch in Decodable Objects
 enum JSONNumber<T: Codable & LosslessStringConvertible>: Codable { // Correct
     case value(T)
     //case string(String)

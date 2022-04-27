@@ -27,6 +27,8 @@ extension K {
     }
 }
 
+
+/// Server Config
 protocol ServerConfig {
     static var url: String { get }
 }

@@ -10,8 +10,11 @@ import UIKit
 
 private typealias Attributes = [NSAttributedString.Key: Any]
 
-class Appearance {
 
+/// Configure app appearance (Fonts, Colors)
+class Appearance {
+    
+    /// Configure app appearance (Fonts, Colors)
     static func configure() {
         UIFont.overrideInitialize()
         
@@ -40,6 +43,14 @@ class Appearance {
         backButtonImage: nil
     )
 
+    
+    /// Get UINavigationBarAppearance for attributes
+    /// - Parameters:
+    ///   - barColor: Navigation Bar Color
+    ///   - titleColor: Navigation Title Color
+    ///   - buttonsColor: Navigation Button Colors
+    ///   - backButtonImage: Back Button Image, default is NULL
+    /// - Returns: UINavigationBarAppearance instance
     static func appearance(withBarColor barColor: UIColor? = nil,
                            titleColor: UIColor,
                            buttonsColor: UIColor,
@@ -104,11 +115,15 @@ class Appearance {
 
     }
     
+    
+    /// Setup Appearance for UIAlertController
     private static func setupAppearanceForAlertController() {
         let view = UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self])
         view.tintColor = .accentColor
     }
     
+    
+    /// Setup UITabBar Appearance
     private static func setupTabBarAppearance() {
         let tabBarItem = UITabBarItem.appearance()
         let attributes: Attributes = [
@@ -119,6 +134,8 @@ class Appearance {
 
 }
 
+
+/// NavigationController with light, dark UINavigationBar base on navigationBar class (LightTintNavigationBar, DarkTintNavigationBar)
 class NavigationController: UINavigationController, UINavigationControllerDelegate {
     
     required init?(coder aDecoder: NSCoder) {
@@ -142,7 +159,7 @@ class NavigationController: UINavigationController, UINavigationControllerDelega
 }
 
 
-
+/// NavigationController with light, dark UINavigationBar automatic switching based on preferredStatusBarStyle
 class AutomaticNavigationController: UINavigationController, UINavigationControllerDelegate {
 
     required init?(coder aDecoder: NSCoder) {

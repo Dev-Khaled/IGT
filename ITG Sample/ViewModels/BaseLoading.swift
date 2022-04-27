@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Base Loading statuses for loading observer
 enum BaseLoading {
     case show
     case hide

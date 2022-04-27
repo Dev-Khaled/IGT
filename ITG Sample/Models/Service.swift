@@ -7,6 +7,10 @@
 
 import Foundation
 
+
+/// ServiceProtocol for fetching data (API of Mockup)
 protocol ServiceProtocol {
+    
+    /// Fetch item of type
     func fetch<ModelType: Decodable>(route: APIRouter, completion: @escaping (Result<ModelType, Error>) -> Void)
 }

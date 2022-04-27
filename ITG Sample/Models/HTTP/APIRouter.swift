@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+
+/// URLRequestConvertible implantation for Github Services
 enum APIRouter: URLRequestConvertible {
     
     case users(since: Int)

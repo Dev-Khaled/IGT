@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+
+/// Log Alamofire requests
 class NetworkLogger: EventMonitor {
 
     let queue = DispatchQueue(label: "com.khaled.networklogger")

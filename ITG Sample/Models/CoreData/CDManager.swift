@@ -8,8 +8,11 @@
 import Foundation
 import CoreData
 
+
+/// CoreData Manager
 class CDManager {
     
+    /// Singleton Instance of CDManager
     static let shared = CDManager()
     private init() {}
     

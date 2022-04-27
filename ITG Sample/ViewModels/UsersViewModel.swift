@@ -9,6 +9,8 @@ import Foundation
 import Interstellar
 import CoreData
 
+
+/// User List View Model
 class UsersViewModel: BaseViewModel {
     
     var items: Observable<[User]> = Observable()
@@ -28,6 +30,8 @@ class UsersViewModel: BaseViewModel {
 
     var context: NSManagedObjectContext { CDManager.shared.persistentContainer.viewContext }
 
+    
+    /// Fetch all stored Users from CD
     @objc func fetchCoreData() {
         let request: NSFetchRequest<User> = User.fetchRequest()
         do {
@@ -40,6 +44,9 @@ class UsersViewModel: BaseViewModel {
         requestData(Int(items.value?.last?.id ?? 0))
     }
     
+    
+    /// Request new users from GitHub API
+    /// - Parameter since: id of last user fetched, or 0 if non
     func requestData(_ since: Int) {
         isLoaderHidden.value = .show
         APIService.shared.fetch(route: APIRouter.users(since: since)) { (result: Swift.Result<[User], Error>) in
@@ -47,6 +54,9 @@ class UsersViewModel: BaseViewModel {
             switch result {
             case .success(let items):
                 self.items.update(items)
+                #if DEBUG
+                CDManager.shared.saveContext()
+                #endif
             case .failure(let error):
                 self.alertMessage.update(error.localizedDescription)
             }
