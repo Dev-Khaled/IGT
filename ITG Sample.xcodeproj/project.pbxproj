@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		292DA9A928194A42003F0F92 /* CoreData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DA9A828194A42003F0F92 /* CoreData+Extensions.swift */; };
+		292DA9B128195108003F0F92 /* ITG_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DA9B028195108003F0F92 /* ITG_SampleTests.swift */; };
 		294AAA6128193EDC00A22C58 /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294AAA6028193EDC00A22C58 /* CDManager.swift */; };
 		2980414B28186DB500A2D3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414A28186DB500A2D3A1 /* AppDelegate.swift */; };
 		2980414D28186DB500A2D3A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414C28186DB500A2D3A1 /* SceneDelegate.swift */; };
@@ -67,8 +68,20 @@
 		299D530F2818A1D0006F5DB7 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D530E2818A1D0006F5DB7 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		292DA9B228195108003F0F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2980413F28186DB500A2D3A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2980414628186DB500A2D3A1;
+			remoteInfo = "ITG Sample";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		292DA9A828194A42003F0F92 /* CoreData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Extensions.swift"; sourceTree = "<group>"; };
+		292DA9AE28195108003F0F92 /* ITG SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ITG SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		292DA9B028195108003F0F92 /* ITG_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITG_SampleTests.swift; sourceTree = "<group>"; };
 		294AAA6028193EDC00A22C58 /* CDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
 		2980414728186DB500A2D3A1 /* ITG Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITG Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2980414A28186DB500A2D3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +140,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		292DA9AB28195108003F0F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2980414428186DB500A2D3A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,10 +162,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292DA9AF28195108003F0F92 /* ITG SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				292DA9B028195108003F0F92 /* ITG_SampleTests.swift */,
+			);
+			path = "ITG SampleTests";
+			sourceTree = "<group>";
+		};
 		2980413E28186DB500A2D3A1 = {
 			isa = PBXGroup;
 			children = (
 				2980414928186DB500A2D3A1 /* ITG Sample */,
+				292DA9AF28195108003F0F92 /* ITG SampleTests */,
 				2980414828186DB500A2D3A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				2980414728186DB500A2D3A1 /* ITG Sample.app */,
+				292DA9AE28195108003F0F92 /* ITG SampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +364,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		292DA9AD28195108003F0F92 /* ITG SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 292DA9B428195108003F0F92 /* Build configuration list for PBXNativeTarget "ITG SampleTests" */;
+			buildPhases = (
+				292DA9AA28195108003F0F92 /* Sources */,
+				292DA9AB28195108003F0F92 /* Frameworks */,
+				292DA9AC28195108003F0F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				292DA9B328195108003F0F92 /* PBXTargetDependency */,
+			);
+			name = "ITG SampleTests";
+			productName = "ITG SampleTests";
+			productReference = 292DA9AE28195108003F0F92 /* ITG SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2980414628186DB500A2D3A1 /* ITG Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2980415E28186DB600A2D3A1 /* Build configuration list for PBXNativeTarget "ITG Sample" */;
@@ -368,6 +416,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					292DA9AD28195108003F0F92 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2980414628186DB500A2D3A1;
+					};
 					2980414628186DB500A2D3A1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -395,11 +447,19 @@
 			projectRoot = "";
 			targets = (
 				2980414628186DB500A2D3A1 /* ITG Sample */,
+				292DA9AD28195108003F0F92 /* ITG SampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		292DA9AC28195108003F0F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2980414528186DB500A2D3A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +484,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		292DA9AA28195108003F0F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292DA9B128195108003F0F92 /* ITG_SampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2980414328186DB500A2D3A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +540,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		292DA9B328195108003F0F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2980414628186DB500A2D3A1 /* ITG Sample */;
+			targetProxy = 292DA9B228195108003F0F92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2980415028186DB500A2D3A1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -509,6 +585,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		292DA9B528195108003F0F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ps.khaled.ITG-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITG Sample.app/ITG Sample";
+			};
+			name = Debug;
+		};
+		292DA9B628195108003F0F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ps.khaled.ITG-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITG Sample.app/ITG Sample";
+			};
+			name = Release;
+		};
 		2980415C28186DB600A2D3A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -688,6 +798,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		292DA9B428195108003F0F92 /* Build configuration list for PBXNativeTarget "ITG SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				292DA9B528195108003F0F92 /* Debug */,
+				292DA9B628195108003F0F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2980414228186DB500A2D3A1 /* Build configuration list for PBXProject "ITG Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

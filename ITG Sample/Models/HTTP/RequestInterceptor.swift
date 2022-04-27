@@ -32,8 +32,7 @@ final class RequestInterceptor: Alamofire.RequestInterceptor {
 
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         
-         let response = request.task?.response as? HTTPURLResponse
-        
+        // let response = request.task?.response as? HTTPURLResponse
         // if let statusCode = response?.statusCode,
         //       (500...599).contains(statusCode),
         //       request.retryCount < retryLimit {

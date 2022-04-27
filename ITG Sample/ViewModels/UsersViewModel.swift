@@ -15,7 +15,7 @@ class UsersViewModel: BaseViewModel {
     
     var items: Observable<[User]> = Observable()
     
-    required init() {
+    public required init() {
         super.init()
         performSelector(
             onMainThread: #selector(fetchCoreData),
@@ -34,6 +34,9 @@ class UsersViewModel: BaseViewModel {
     /// Fetch all stored Users from CD
     @objc func fetchCoreData() {
         let request: NSFetchRequest<User> = User.fetchRequest()
+        request.sortDescriptors = [
+            NSSortDescriptor(key: "id", ascending: true)
+        ]
         do {
             let fetch = try context.fetch(request)
             self.items.update(fetch)
@@ -53,7 +56,9 @@ class UsersViewModel: BaseViewModel {
             self.isLoaderHidden.value = .hide
             switch result {
             case .success(let items):
-                self.items.update(items)
+                var currentItems = self.items.value ?? []
+                currentItems.append(contentsOf: items)
+                self.items.update(currentItems)
                 #if DEBUG
                 CDManager.shared.saveContext()
                 #endif

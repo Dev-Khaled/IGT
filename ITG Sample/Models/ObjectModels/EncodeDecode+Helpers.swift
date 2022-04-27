@@ -27,9 +27,9 @@ func newJSONEncoder() -> JSONEncoder {
 }
 
 
-extension DateFormatter {
+public extension DateFormatter {
     /// Date formatter for JSON
-     static let jsonDateFormatter: DateFormatter = {
+    static let jsonDateFormatter: DateFormatter = {
          let formatter = DateFormatter()
          formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // 2007-10-20T05:24:19Z
          formatter.locale = Locale(identifier: "en_US_POSIX")
