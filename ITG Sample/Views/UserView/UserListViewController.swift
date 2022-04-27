@@ -25,7 +25,7 @@ class UserListViewController: BaseWireframe<UsersViewModel> {
     override func configure(with viewModel: UsersViewModel) {
         super.configure(with: viewModel)
         
-        viewModel.requestData(0)
+        //viewModel.requestData(0)
         viewModel.items.subscribe { [weak self]  items in
             self?.tableView.reloadData()
         }

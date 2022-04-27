@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		294AAA6128193EDC00A22C58 /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294AAA6028193EDC00A22C58 /* CDManager.swift */; };
 		2980414B28186DB500A2D3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414A28186DB500A2D3A1 /* AppDelegate.swift */; };
 		2980414D28186DB500A2D3A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414C28186DB500A2D3A1 /* SceneDelegate.swift */; };
 		2980414F28186DB500A2D3A1 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980414E28186DB500A2D3A1 /* UserListViewController.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294AAA6028193EDC00A22C58 /* CDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
 		2980414728186DB500A2D3A1 /* ITG Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITG Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2980414A28186DB500A2D3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2980414C28186DB500A2D3A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		298041B7281875B700A2D3A1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				294AAA6028193EDC00A22C58 /* CDManager.swift */,
 				2980415328186DB500A2D3A1 /* ITG_Sample.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -456,6 +459,7 @@
 				299D52FD28188117006F5DB7 /* NoDataView.swift in Sources */,
 				2980419C281872FB00A2D3A1 /* UserDefaults+Extension.swift in Sources */,
 				2980416D2818701600A2D3A1 /* Service.swift in Sources */,
+				294AAA6128193EDC00A22C58 /* CDManager.swift in Sources */,
 				29804198281872FB00A2D3A1 /* Localizable+Extensions.swift in Sources */,
 				299D530B28189A83006F5DB7 /* UsersViewModel.swift in Sources */,
 				29804197281872FB00A2D3A1 /* UITableView+Utilities.swift in Sources */,

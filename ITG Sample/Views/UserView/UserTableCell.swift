@@ -25,18 +25,24 @@ class UserTableCell: UITableViewCell, NibBased {
     
     func configure(with user: User) {
         nameLabel.text = user.login
-        switch user.type {
+        switch user.typeItem {
         case .user:
             typeLabel.text = "User".localized
             avatarView.kf.setImage(
-                with: user.avatarUrl.url,
+                with: user.avatarUrl?.url,
                 placeholder: UIImage.userPlaceholder
             )
         case .organization:
             typeLabel.text = "Organization".localized
             avatarView.kf.setImage(
-                with: user.avatarUrl.url,
+                with: user.avatarUrl?.url,
                 placeholder: UIImage.organizationPlaceholder
+            )
+        default:
+            typeLabel.text = "Unknown".localized
+            avatarView.kf.setImage(
+                with: user.avatarUrl?.url,
+                placeholder: UIImage.placeholder
             )
         }
         

@@ -11,6 +11,7 @@ func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     decoder.dateDecodingStrategy = .formatted(.jsonDateFormatter)
+    decoder.userInfo[CodingUserInfoKey.managedObjectContext] = CDManager.shared.persistentContainer.viewContext
     return decoder
 }
 
